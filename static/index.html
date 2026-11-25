@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>UNO PRO</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header><div class="brand">🃏 UNO <b>PRO</b></div><div class="badge">نسخة تجريبية</div></header>
+    <section id="welcome" class="panel">
+      <div class="logo">UNO</div>
+      <h1>مرحباً بك في UNO PRO</h1>
+      <p>تحدى الكمبيوتر واختبر مهاراتك!</p>
+      <button id="newGame" class="primary">🎮 ابدأ مباراة</button>
+    </section>
+    <section id="game" class="hidden">
+      <div class="status panel">
+        <div><span class="muted">الخصم</span><strong>🤖 الكمبيوتر</strong><small id="aiCount">7 أوراق</small></div>
+        <div class="turn" id="turnText">دورك</div>
+      </div>
+      <div class="table panel">
+        <div class="table-label">الورقة الحالية</div>
+        <div id="topCard" class="card big">UNO</div>
+        <div id="colorText" class="muted"></div>
+        <p id="message">دورك الآن!</p>
+      </div>
+      <div class="actions">
+        <button id="drawBtn" class="secondary">＋ اسحب ورقة</button>
+        <button id="newBtn" class="secondary">↻ مباراة جديدة</button>
+      </div>
+      <div class="hand-title">أوراقك <span id="handCount"></span></div>
+      <div id="hand" class="hand"></div>
+    </section>
+    <div id="toast" class="toast hidden"></div>
+    <footer>UNO PRO • لعبة تجريبية قيد التطوير</footer>
+  </main>
+  <script src="/static/game.js"></script>
+</body>
+</html>
